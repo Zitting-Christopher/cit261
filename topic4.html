@@ -1,0 +1,56 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" type="text/css" href="styles.css">
+		<title>
+			Local Storage API, Storing and Retrieving Simple Data, Arrays, Associative Arrays, and Objects
+		</title>
+	</head>
+	<body>
+		<header>
+            <a href="index.php">CIT 261 Proficiency Check</a> - Local Storage API, Storing and Retrieving Simple Data, Arrays, Associative Arrays, and Objects
+		</header>
+		<section>
+	<script>
+			function getToppingDiv()
+                {
+					topping = localStorage.getItem('pizzaTopping');
+					document.getElementById("topping").innerHTML = 'pizzaTopping: <span style="font-weight:bold">' + 						topping + '</span>';
+                }
+			
+			function getToppingForm()
+                {
+					topping = localStorage.getItem('pizzaTopping');
+					document.getElementById("pTop").value = topping;
+                }
+			
+			function setTopping()
+				{
+					topping = document.getElementById("pTop").value;
+					localStorage.setItem('pizzaTopping',document.getElementById("pTop").value);
+				}
+				
+			function setJSON()
+				{
+					var toppings = ["pepperonis","cheese","olives","jalapenos"];
+					var jTop = JSON.stringify(toppings);
+					document.getElementById("JSON").innerHTML = "toppings " + jTop;
+					
+				}
+		</script>
+		<br>
+		<h2>Retrieving Simple Data from Local Storage</h2><div onclick="getToppingDiv()" id="topping">Click here for pizza topping of the day!</div>
+		<form method="post" action="topic4.html">
+			<h2>Submitting Simple Data to Local Storage</h2><input type="text" id="pTop"  onclick="getToppingForm()">
+			<input id="submit" onclick="setTopping()" type="submit">
+		</form>
+		<h2>Storing and Retrieving arrays using JSON</h2>
+		<div onclick="setJSON();" id="JSON">Click me to reveal the mysteries of pizza.</div>
+		<br>
+	</section>
+		<footer>
+			Copyright &copy; 2017 &middot; <a href="https://www.tutapps.net" target="_blank">Chris Zitting &middot; <a href="https://www.hostyour.space" target="_blank">Host Your Space</a>
+		</footer>
+	</body>
+</html>

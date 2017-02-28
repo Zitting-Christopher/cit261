@@ -1,0 +1,71 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" type="text/css" href="styles.css">
+		<title>
+			Standard JavaScript Events Including those for Mobile Devices ( Ex. onTouchBegin, onLoad, etc.)
+		</title>
+	</head>
+	<body>
+		<header>
+			<a href="index.php">CIT 261 Proficiency Check</a> - Standard JavaScript Events Including those for Mobile Devices ( Ex. onTouchBegin, onLoad, etc.)
+		</header>
+        <section id="section" ontouchstart="toStart()" ontouchend="toEnd()">
+		<br>
+        When you mouseover the button, the text color will change to black. <br/>
+        When you click it, the background will change to red and it will tell you to let go.<br/>
+        When you double click it, the text color will change back to white and the text will change back to "Click me". <br/> <br/>
+            <button id="body" style="background:purple; color:white; border:none;" oncontextmenu="contMenu()" ondblclick="dblClick()" onmouseover="changeText()" onclick="changeBg()">Click me</button> <br/><br/>
+
+            <form method="post" action="jsevents.html">
+                <input type="text" oninput="getInput()" onselect="select()" onfocus="formFoc()" id="text"/>
+            </form>
+			<br>
+            <script type="text/javascript">
+                function changeBg()
+                {
+                    document.getElementById("body").style.background = "red";
+                    document.getElementById("body").innerHTML = "Let go of me!";
+                }
+                function changeText()
+                {
+                    document.getElementById("body").style.color = "black";
+                }
+                function dblClick()
+                {
+                    document.getElementById("body").style.color = "white";
+                    document.getElementById("body").innerHTML = "Click me!";
+                }
+                function contMenu()
+                {
+                    document.getElementById("body").style.color = "black";
+                    document.getElementById("body").style.background = "white";
+                }
+                function formFoc()
+                {
+                    document.getElementById("text").style.borderColor = "red";
+                }
+                function getInput()
+                {
+                    document.getElementById("text").style.borderColor = "green";
+                }
+                
+                function toStart()
+                {
+                    document.getElementById("section").style.background = "olivedrab";
+                }
+                
+                function toEnd()
+                {
+                    document.getElementById("section").style.background = "white";
+                }
+
+            </script>
+		<br>
+        </section>
+		<footer>
+			Copyright &copy; 2017 &middot; <a href="https://www.tutapps.net" target="_blank">Chris Zitting &middot; <a href="https://www.hostyour.space" target="_blank">Host Your Space</a>
+		</footer>
+	</body>
+</html>

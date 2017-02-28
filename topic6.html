@@ -1,0 +1,179 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" type="text/css" href="styles.css">
+		<title>
+            Creating CSS3 Transitions and Animations in CSS and triggering them with JavaScript
+		</title>
+		<style>
+			.box {
+				-webkit-animation-name: movingBox;
+				-webkit-animation-duration: 2300ms;
+				-webkit-animation-iteration-count: infinite;
+				-webkit-animation-direction: alternate;
+
+				-moz-animation-name: movingBox;
+				-moz-animation-duration: 2300ms;
+				-moz-animation-iteration-count: infinite;
+				-moz-animation-direction: alternate;
+
+				-ms-animation-name: movingBox;
+				-ms-animation-duration: 2300ms;
+				-ms-animation-iteration-count: infinite;
+				-ms-animation-direction: alternate;
+
+				-o-animation-name: movingBox;
+				-o-animation-duration: 2300ms;
+				-o-animation-iteration-count: infinite;
+				-o-animation-direction: alternate;
+
+				animation-name: movingBox;
+				animation-duration: 2300ms;
+				animation-iteration-count: infinite;
+				animation-direction: alternate;
+
+				width: 100px;
+				height: 100px;
+				background: #FFF;
+				box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+			}
+
+			@-webkit-keyframes movingBox {
+			  0% {
+			    transform: translate(0, 0);
+			    opacity: 0.3;
+			  }
+
+			  25% {
+			    opacity: 0.9;
+			  }
+
+			  50% {
+			    transform: translate(100px, 30px);
+			    opacity: 0.2;
+			  }
+
+			  100% {
+			    transform: translate(300px, 30px);
+			    opacity: 0.8;
+			  }
+			}
+
+			@-moz-keyframes movingBox {
+			  0% {
+			    transform: translate(0, 0);
+			    opacity: 0.3;
+			  }
+
+			  25% {
+			    opacity: 0.9;
+			  }
+
+			  50% {
+			    transform: translate(100px, 30px);
+			    opacity: 0.2;
+			  }
+
+			  100% {
+			    transform: translate(300px, 30px);
+			    opacity: 0.8;
+			  }
+			}
+
+			@-ms-keyframes movingBox {
+			  0% {
+			    transform: translate(0, 0);
+			    opacity: 0.3;
+			  }
+
+			  25% {
+			    opacity: 0.9;
+			  }
+
+			  50% {
+			    transform: translate(100px, 30px);
+			    opacity: 0.2;
+			  }
+
+			  100% {
+			    transform: translate(300px, 30px);
+			    opacity: 0.8;
+			  }
+			}
+
+			@-o-keyframes movingBox {
+			  0% {
+			    transform: translate(0, 0);
+			    opacity: 0.3;
+			  }
+
+			  25% {
+			    opacity: 0.9;
+			  }
+
+			  50% {
+			    transform: translate(100px, 30px);
+			    opacity: 0.2;
+			  }
+
+			  100% {
+			    transform: translate(300px, 30px);
+			    opacity: 0.8;
+			  }
+			}
+
+			@keyframes movingBox {
+			  0% {
+			    transform: translate(0, 0);
+			    opacity: 0.3;
+			  }
+
+			  25% {
+			    opacity: 0.9;
+			  }
+
+			  50% {
+			    transform: translate(100px, 30px);
+			    opacity: 0.2;
+			  }
+
+			  100% {
+			    transform: translate(300px, 30px);
+			    opacity: 0.8;
+			  }
+			}
+    </style>
+		</style>
+	</head>
+	<body>
+		<header>
+			<a href="index.php">CIT 261 Proficiency Check</a> - Creating CSS3 Transitions and Animations in CSS and triggering them with JavaScript
+		</header>
+		<section>
+			<div id="heading">Animation example using CSS and Javascript</div>
+			<div class="box" ontransitionend="onTransitionEnd();" id="cssanimation"></div>
+				
+<script>
+var box = document.querySelector('.box');
+box.addEventListener('transitionend', onTransitionEnd, false);
+
+function onTransitionEnd() {
+  // Handle the transition finishing.
+  var target = document.querySelector('.box');
+	var player = target.animate([
+  {transform: 'translate(0)'},
+  {transform: 'translate(100px, 100px)'}
+], 500);
+player.addEventListener('finish', function() {
+  target.style.transform = 'translate(100px, 100px)';
+});
+}
+</script>
+<br><br>
+		</section>
+		<footer>
+			Copyright &copy; 2017 &middot; <a href="https://www.tutapps.net" target="_blank">Chris Zitting &middot; <a href="https://www.hostyour.space" target="_blank">Host Your Space</a>
+		</footer>
+	</body>
+</html>

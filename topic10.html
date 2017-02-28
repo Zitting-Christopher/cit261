@@ -1,0 +1,50 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" type="text/css" href="styles.css">
+		<title>
+			HTML5 Media Tags
+		</title>
+	</head>
+	<body>
+		<header>
+			<a href="index.php">CIT 261 Proficiency Check</a> - HTML5 Tags - Video, Audio, Canvas, etc.
+		</header>
+		<section>
+			<div class="heading" id="video">
+				<br>HTML5 Video Demo
+				<br><br>
+				<video id="video1" width="640" height="480" poster="clip.png" controls src="HTML 5 Tags.mp4" type="video/mp4"></video>
+				</div>
+				<br><br>
+			<div class="heading" id="audio">
+				HTML5 Audio Demo
+				<br><br>
+				<audio id="audio1" controls src="clip.m4a" type="audio/m4a"></audio>
+			</div>
+				<br><br>
+			<div class="heading" id="canvas">
+			HTML5 Canvas Demo
+				<br><br>
+				<canvas id="canvas1" width="400" height="100" style="border:1px dashed purple;">Your browser does not support canvases</canvas>
+				<script>
+					var can = document.getElementById("canvas1");
+					var con = can.getContext("2d");
+					con.font = "45px Arial";
+					con.strokeText("CIT 261 Test",50,70);
+				</script>
+			</div>
+				<br><br>
+			<div class="heading" id="img">
+				HTML 5 Image Demo
+				<br><br>
+				<img src="clip.png" width="528" height="291" alt="clip.png">
+			</div>
+				<br><br>
+		</section>
+		<footer>
+			Copyright &copy; 2017 &middot; <a href="https://www.tutapps.net" target="_blank">Chris Zitting &middot; <a href="https://www.hostyour.space" target="_blank">Host Your Space</a>
+		</footer>
+	</body>
+</html>
