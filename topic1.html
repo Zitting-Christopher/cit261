@@ -1,0 +1,93 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" type="text/css" href="styles.css">
+		<title>
+			Loops, Conditional Statements, Functions, Variables, Parameters, Arrays, Associative Arrays
+		</title>
+	</head>
+	<body>
+		<header>
+            <a href="index.php">CIT 261 Proficiency Check</a> - Loops, Conditional Statements, Functions, Variables, Parameters, Arrays, Associative Arrays
+		</header>
+		<section>
+	       <script>
+			function simpleLoop()
+               {
+                   var alphabet = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'];
+                   
+                   var string1 = [];
+                   
+                   for(i = 0; i < alphabet.length; i++)
+                       {
+                           string1.push(alphabet[i]);
+                           document.getElementById("loop").innerHTML += "The value of index #" + i + " in the array is: " + string1[i] + "<br>";
+                       }
+                   document.getElementById("loopBtn").style = "display:none;";
+                   document.getElementById("showLoop").style = "display:inline;";
+                   document.getElementById("hideLoop").style = "display:inline;";
+               }
+            function showLoop()
+               {
+                   document.getElementById("loop").style = "display:block;";
+               }
+            function hideLoop()
+               {
+                   document.getElementById("loop").style = "display:none;";
+               }
+            function changeNum(id)
+               {
+                   if(id == "btn1")
+                       {
+                          document.getElementById("number").innerHTML = "1";
+                       }
+                   if(id == "btn2")
+                       {
+                          document.getElementById("number").innerHTML = "2";
+                       }
+                   if(id == "btn3")
+                       {
+                          document.getElementById("number").innerHTML = "3";
+                       }
+               }
+            function aarr(id)
+               {
+                   var color = [];
+                   color["black"] = "#000000";
+                   color["white"] = "#ffffff";
+                   
+                   if(id == "black")
+                       {
+                         document.getElementById("assocArr").innerHTML = 'color["black"] = ' + color["black"];
+                       }
+                   if(id == "white")
+                       {
+                         document.getElementById("assocArr").innerHTML = 'color["white"] = ' + color["white"]; 
+                       }
+                   
+               }
+		   </script>
+		<br>
+		<h2>Simple Loop</h2>
+            The for loop below is run using a function on an array including every letter in the alphabet.<br>
+            <button id="showLoop" style="display:none;" onclick="showLoop()">Show Loop</button><button id="hideLoop" style="display:none;" onclick="hideLoop()">Hide Loop</button>
+            <div id="loop"></div><button onclick="simpleLoop()" id="loopBtn">Start Loop</button>
+            
+        <h2>Conditional Statements</h2>
+            When a button is pressed below, I pass the id of the button through to the function to determine which number is shown in the div below.<br>
+            <button onclick="changeNum(this.id)" id="btn1">1</button><button onclick="changeNum(this.id)" id="btn2">2</button><button onclick="changeNum(this.id)" id="btn3">3</button>
+            <div id="number"></div>
+            
+		<h2>Associative Arrays</h2>
+            The color name on the button is passed through to the function to pull the value from the associative array with the color name as the key.<br>
+		    <button onclick="aarr(this.id)" id="black">black</button>
+            <button onclick="aarr(this.id)" id="white">white</button>
+            <div id="assocArr"></div>
+            <br>
+	</section>
+		<footer>
+			Copyright &copy; 2017 &middot; <a href="https://www.tutapps.net" target="_blank">Chris Zitting &middot; <a href="https://www.hostyour.space" target="_blank">Host Your Space</a>
+		</footer>
+	</body>
+</html>

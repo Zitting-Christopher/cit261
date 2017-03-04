@@ -1,11 +1,11 @@
 body
 {
-	text-align:center;
 	font-family:"Palatino Linotype", "Book Antiqua", Palatino, serif;
 }
 
 header
 {
+	text-align:center;
 	padding-top:50px;
 	padding-bottom:50px;
 	background:#203342;
@@ -37,6 +37,7 @@ li
 
 section
 {
+  padding-left:5%;
 	border-left:1px solid #203342;
 	border-right:1px solid #203342;
 }
@@ -57,7 +58,7 @@ table
 	font-weight:bold;
 	padding-left:10px;
 	padding-right:10px;
-	text-align:center;
+/*	text-align:center;*/
 	margin:0 auto;
 	color:#203342;
 	font-size:1.2em;
@@ -95,6 +96,7 @@ a:hover
 
 footer
 {
+	text-align:center;
 	padding-top:10px;
 	padding-bottom:10px;
 	background:#203342;

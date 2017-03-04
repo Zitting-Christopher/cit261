@@ -48,10 +48,10 @@
 				</tr>
 				<tr>
 					<td class="topic">1</td>
-					<td class="topic"><a href="" target="_blank">Loops, Conditional Statements, Functions, Variables, Parameters, Arrays, Associative Arrays</a></td>
+					<td class="topic"><a href="topic1.html" target="_blank">Loops, Conditional Statements, Functions, Variables, Parameters, Arrays, Associative Arrays</a></td>
 					<td class="topic"></td>
 					<td class="topic"><?php vid_link(); ?></td>
-					<td class="last"><?php date_mod(''); ?></td>
+					<td class="last"><?php date_mod('topic1.html'); ?></td>
 				</tr>
 				<tr>
 					<td class="topic">2</td>
