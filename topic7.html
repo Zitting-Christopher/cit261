@@ -1,0 +1,50 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" type="text/css" href="styles.css">
+		<title>
+			Manipulating CSS Class Properties Using JavaScript
+		</title>
+	</head>
+	<body>
+		<header>
+            <a href="index.php">CIT 261 Proficiency Check</a> - Manipulating CSS Class Properties Using JavaScript
+		</header>
+		<section>
+	       <script>
+			function changeClass(id)
+               {
+                   if(id == "classA")
+                       {
+                          var cA = document.getElementsByClassName("A1")[0].style.fontWeight= "bold";
+                       }
+                   if(id == "classB")
+                       {
+                          var cB = document.getElementsByClassName("B1")[0].style.fontSize = "2em";
+                       }
+                   if(id == "classC")
+                       {
+                        var cC = document.getElementsByClassName("C1")[0].style.color = "goldenrod";
+                       }
+               }
+		   </script>
+		<br>
+		<h2>Manipulating Class properties</h2>
+            <button onclick="changeClass(this.id)" id="classA">class A</button>
+            <button onclick="changeClass(this.id)" id="classB">class B</button>
+            <button onclick="changeClass(this.id)" id="classC">class C</button>
+            <h4>Class A</h4>
+            <div class="A1">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+            <h4>Class B</h4>
+            <div class="B1">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+            <h4>Class C</h4>
+            <div class="C1">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+            
+		    <br>
+	</section>
+		<footer>
+			Copyright &copy; 2017 &middot; <a href="https://www.tutapps.net" target="_blank">Chris Zitting &middot; <a href="https://www.hostyour.space" target="_blank">Host Your Space</a>
+		</footer>
+	</body>
+</html>

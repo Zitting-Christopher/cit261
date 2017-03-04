@@ -90,10 +90,10 @@
 				</tr>
 				<tr>
 					<td class="topic">7</td>
-					<td class="topic"><a href="" target="_blank">Manipulating CSS Class Properties Using JavaScript</a></td>
+					<td class="topic"><a href="topic7.html" target="_blank">Manipulating CSS Class Properties Using JavaScript</a></td>
 					<td class="topic"></td>
 					<td class="topic"><?php vid_link(); ?></td>
-					<td class="last"><?php date_mod(''); ?></td>
+					<td class="last"><?php date_mod('topic7.html'); ?></td>
 				</tr>
 				<tr>
 					<td class="topic">8</td>
